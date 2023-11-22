@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Open+Sans:wght@300;600&family=Raleway:wght@300&family=Roboto+Mono:wght@200&family=Syne&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/77d82db749.js" crossorigin="anonymous"></script>
+    <style>
+        #line{
+            height: 0.8vh;
+            background-color: #a0138e;
+
+        }
+        #logo{
+            position: relative;
+          
+            bottom:40px;
+        }
+        #logo img{
+            height:3.2rem;
+            display: inline-block;
+            position: relative;
+            top:12px;
+
+        
+        }
+        #logo h3{
+            display: inline-block;
+            font-family: 'Cormorant Garamond', serif;
+            position: relative;
+            top:18px;
+            font-weight: bolder;
+            font-size: 2.9rem;
+        }
+        #login-icons button{
+      
+          height:40px;
+          width: 40px;
+        
+
+        }
+        #login-icons button .fab{
+           color:white;
+        }
+       
+        .card{
+          box-shadow: -10px 10px 10px 5px rgb(129, 125, 125);
+        }
+        @media screen and (max-width:1200px){
+          #logo img{
+            height:2.5rem;
+          }
+          #logo h3{
+            display: inline-block;
+            font-family: 'Cormorant Garamond', serif;
+            position: relative;
+            top:18px;
+            font-weight: bolder;
+            font-size: 2rem;
+        }
+        }
+       
+       
+    </style>
+</head>
+<body>
+    <header>
+        <div id="line"></div>
+    </header>   
+<section class="vh-100" style="background-color: white; padding: 3% 10%">
+ 
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col col-xl-12">
+          <div class="card" style="border-radius: 1rem;">
+            <div class="row g-0">
+              <div class="col-md-6 col-lg-5 d-none d-md-block">
+                <img src="../images/godess.png"
+                  alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem; height:100%" />
+              </div>
+              <div class="col-md-6 col-lg-7 d-flex align-items-center">
+                <div class="card-body col-md-12 p-4 p-lg-5 text-black">
+  
+                  <form>
+                    <div id="logo" class="col-12 justify-content-center d-flex my-1 pb-1">
+                      
+                      <span class="h1 fw-bold mb-0"><img src="../images/log.png">
+                        <h3>WorshipWanderers</h3></span>
+                    </div>
+  
+                    <h4 class="font-weight-light mb-1 pb-3" style="letter-spacing: 1px;">Sign up</h4>
+                    <div class="form-outline mb-3">
+                      <label class="form-label" for="form2Example17">Email address</label>
+                      <input type="email" id="form2Example17" class="form-control form-control-lg" />
+                      
+                    </div>
+                    <div class="form-outline mb-3">
+                        <label class="form-label" for="form2Example27">Password</label>
+                        <input type="password" id="form2Example27" class="form-control form-control-lg" />
+                      </div>
+                    
+                    <div class="form-outline mb-3">
+                      <label class="form-label" for="form2Example27">Confirm Password</label>
+                      <input type="password" id="form2Example27" class="form-control form-control-lg" />
+                    </div>
+                    <a class="small text-muted" href="#!">Forgot password?</a>
+                    <div class="pt-1 mb-4">
+                      <button class="btn btn-dark btn-lg btn-block" type="button" style="background-color: black; border-radius: 0;">Sign up</button>
+                    </div>
+
+
+                    <!-- Social media login options -->
+                    <div class="mb-5 mx-5 px-3" id="login-icons">
+                      <p class="text-center mb-3">Or Sign up with:</p>
+                      <div class="d-flex justify-content-around mx-lg-5 px-lg-5">
+                        <button class="btn btn-lg rounded-circle d-flex align-items-center justify-content-center" style="background-color: rgb(232, 55, 32)" type="button" onclick="loginWithGoogle()">
+                          <i class="fab fa-google"></i>
+                        </button>
+                        <button class="btn btn-lg rounded-circle d-flex align-items-center justify-content-center" type="button" style="background-color: rgb(79,102,165)" onclick="loginWithFacebook()">
+                          <i class="fab fa-facebook-f"></i>
+                        </button>
+                        <button class="btn btn-lg rounded-circle d-flex align-items-center justify-content-center" style="background-color: rgb(77,159,235)" type="button" onclick="loginWithTwitter()">
+                          <i class="fab fa-twitter"></i>
+                        </button>
+                      </div>
+                    </div>
+ 
+                    
+                    <p class="mb-3 pb-lg-2" style="color: #393f81;">Already have an account? <a href="/pages/login.html"
+                        style="color: #393f81;">Log in</a></p>
+                   
+                    <a href="#termsModal" data-toggle="modal" class="small text-muted">Terms of use.</a>
+
+                        <div class="modal fade" id="termsModal" tabindex="-1" role="dialog" aria-labelledby="termsModalLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="termsModalLabel">Terms of Use</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                <div class="container mt-1">
+                            
+                              
+                                  <p>Welcome to <span style="font-weight: bolder;">WorshipWanderers!</span> Before using our platform, please take a moment to review our terms of use. By accessing and using our website, you agree to comply with and be bound by the following terms and conditions.</p>
+                              
+                                  <h3>1. User Conduct:</h3>
+                                  <ul>
+                                      <li>Users are expected to engage respectfully and responsibly when contributing reviews and comments.</li>
+                                      <li>Any content submitted must be accurate, unbiased, and relevant to the temple being reviewed.</li>
+                                      <li>Users are prohibited from posting offensive, defamatory, or inappropriate content.</li>
+                                  </ul>
+                              
+                                  <h3>2. Review Guidelines:</h3>
+                                  <ul>
+                                      <li>Reviews should focus on the temple's atmosphere, cultural significance, and overall experience.</li>
+                                      <li>Avoid sharing personal information or engaging in any form of discrimination.</li>
+                                      <li>The website reserves the right to moderate and remove content that violates these guidelines.</li>
+                                  </ul>
+                              
+                                  <h3>3. Intellectual Property:</h3>
+                                  <ul>
+                                      <li>Users retain ownership of the content they submit, but grant [Your Temple Reviewing Website] a non-exclusive, royalty-free license to use, modify, and display the content.</li>
+                                      <li>Unauthorized use or reproduction of website content is strictly prohibited.</li>
+                                  </ul>
+                              
+                                  <h3>4. Privacy Policy:</h3>
+                                  <ul>
+                                      <li>Protecting user privacy is a priority. Please refer to our Privacy Policy for details on how we collect, use, and safeguard your information.</li>
+                                  </ul>
+                              
+                                  <h3>5. Modification of Terms:</h3>
+                                  <ul>
+                                      <li>WorshipWanderers reserves the right to update or modify these terms of use at any time. Users will be notified of changes, and continued use constitutes acceptance of the modified terms.</li>
+                                  </ul>
+                              
+                                  <h3>6. Termination of Access:</h3>
+                                  <ul>
+                                      <li>The website reserves the right to terminate user access for violations of these terms or any inappropriate conduct.</li>
+                                  </ul>
+                              
+                                  <h3>7. Disclaimer:</h3>
+                                  <ul>
+                                      <li>WorshipWanderers provides information on an "as is" basis. We do not endorse or guarantee the accuracy of content submitted by users.</li>
+                                  </ul>
+                              
+                                  <p>By using WorshipWanderers, you acknowledge and agree to these terms of use. If you do not agree with these terms, please refrain from using our platform. We appreciate your cooperation in maintaining a positive and informative community.</p>
+                              
+                                  <p>For any questions or concerns, please contact us at <a href="mailto:worshipWanderers@email.com">worshipWanderers@email.com</a>.</p>
+                              </div>
+                              
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    <!-- Privacy Policy Modal -->
+                    <a href="#privacyModal" data-toggle="modal" class="small text-muted">Privacy Policy</a>
+                    <div class="modal fade" id="privacyModal" tabindex="-1" role="dialog" aria-labelledby="privacyModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="privacyModalLabel">Privacy Policy</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>This Privacy Policy governs the manner in which WorshipWanderers collects, uses, maintains, and discloses information collected from users (each, a "User") of the WorshipWanderers.com website ("Site").</p>
+                    
+                                    <h3>Personal Identification Information</h3>
+                                    <p>We may collect personal identification information from Users in various ways, including, but not limited to, when Users visit our site, register on the site, fill out a form, and in connection with other activities, services, features, or resources we make available on our Site.</p>
+                    
+                                    <h3>Non-personal Identification Information</h3>
+                                    <p>We may collect non-personal identification information about Users whenever they interact with our Site. Non-personal identification information may include the browser name, the type of computer, and technical information about Users' means of connection to our Site, such as the operating system and the Internet service providers utilized and other similar information.</p>
+                    
+                                    <h3>Web Browser Cookies</h3>
+                                    <p>Our Site may use "cookies" to enhance User experience. Users' web browsers place cookies on their hard drives for record-keeping purposes and sometimes to track information about them. Users may choose to set their web browsers to refuse cookies or to alert you when cookies are being sent. If they do so, note that some parts of the Site may not function properly.</p>
+                    
+                        
+                    
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+ </section>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+      // Add your social media login functionality here
+      function loginWithGoogle() {
+        // Implement Google login logic
+        alert("Login with Google");
+      }
+  
+      function loginWithFacebook() {
+        // Implement Facebook login logic
+        alert("Login with Facebook");
+      }
+  
+      function loginWithTwitter() {
+        // Implement Twitter login logic
+        alert("Login with Twitter");
+      }
+    </script>
+</body>
+</html>
